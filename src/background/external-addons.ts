@@ -539,6 +539,14 @@ export const addons: Map<
     },
   ],
   [
+    'containerise-fork@berrnd.de',
+    {
+      name: 'Containerise @berrnd Fork',
+      enabled: false,
+      version: false,
+    },
+  ],
+  [
     'block_outside_container@jspenguin.org',
     {
       name: 'Block sites outside container',

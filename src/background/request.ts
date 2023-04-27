@@ -413,6 +413,36 @@ export class Request {
       }
     }
 
+    if (this.management.addons.get('containerise-fork@berrnd.de')?.enabled) {
+      try {
+        const hostmap = await browser.runtime.sendMessage(
+          'containerise-fork@berrnd.de',
+          {
+            method: 'getHostMap',
+            url: request.url,
+          }
+        );
+        if (
+          typeof hostmap === 'object' &&
+          hostmap.cookieStoreId &&
+          hostmap.enabled
+        ) {
+          this.debug(
+            '[handleRequest] assigned with containerise @berrnd Fork we do nothing',
+            hostmap
+          );
+          return true;
+        } else {
+          this.debug('[handleRequest] not assigned with containerise @berrnd Fork', hostmap);
+        }
+      } catch (error) {
+        this.debug(
+          '[handleRequest] contacting containerise @berrnd Fork failed, probably old version',
+          error
+        );
+      }
+    }
+
     if (
       this.management.addons.get('block_outside_container@jspengun.org')
         ?.enabled

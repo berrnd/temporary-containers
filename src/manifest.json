@@ -1,9 +1,8 @@
 {
   "description": "Open tabs, websites, and links in automatically managed disposable containers. Containers isolate the data websites store (cookies, cache, and more) from each other, further enhancing your privacy while you browse.",
   "manifest_version": 2,
-  "name": "Temporary Containers",
-  "version": "1.9.2",
-  "homepage_url": "https://github.com/stoically/temporary-containers",
+  "name": "Temporary Containers @berrnd Fork",
+  "version": "1.9.2.1001",
   "icons": {
     "48": "icons/tmpcontainer-48.png"
   },
@@ -105,19 +104,25 @@
   ],
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["contentscript.js"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "contentscript.js"
+      ],
       "run_at": "document_end",
       "all_frames": true
     }
   ],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": [
+      "background.js"
+    ]
   },
   "incognito": "not_allowed",
   "applications": {
     "gecko": {
-      "id": "{c607c8df-14a7-4f28-894f-29e8722976af}",
+      "id": "temporary-containers-fork@berrnd.de",
       "strict_min_version": "68.0"
     }
   }
