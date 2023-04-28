@@ -1,10 +1,17 @@
-# Temporary Containers Firefox Add-on
+# Temporary Containers @berrnd Fork
 
+-----
+-----
 > This is a fork of [Temporary Containers](https://github.com/stoically/temporary-containers) (based on the v1.9.2 release) which adds compatibility with [my fork](https://github.com/berrnd/containerise) of [Containerise](https://github.com/kintesh/containerise).
 >
 > The (signed) .xpi file for manual installation can be found in the [release assets](https://github.com/berrnd/temporary-containers/releases/latest).
 >
 > _Dev note: Node v16 is needed for building._
+
+-----
+-----
+
+Original README:
 
 ## Development
 
